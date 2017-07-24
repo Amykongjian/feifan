@@ -32,7 +32,7 @@
 			</ul>
 			
 			<div class="wechat right">
-				
+				<img src="images/wx.png"/>
 			</div>
 			</div>
 		</div>
@@ -50,6 +50,22 @@
 			</ul>
 		</div>
 		</div>
+		<!--banner-->
+		<div class="box">
+			<ul>
+				<li><img src="images/banner1.jpg"></li>
+				<li><img src="images/banner2.jpg"></li>
+				<li><img src="images/banner3.jpg"></li>
+				<li><img src="images/banner4.jpg"></li>
+				<li><img src="images/banner5.jpg"></li>
+				<li><img src="images/banner6.jpg"></li>
+				<li><img src="images/banner7.jpg"></li>
+				<li><img src="images/banner8.jpg"></li>
+				<li><img src="images/banner9.jpg"></li>
+				<li><img src="images/banner10.jpg"></li>
+			</ul>
+			<div class="points"></div>
+		</div>
 		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 		<!--导航条效果-->
 		<script type="text/javascript">
@@ -59,6 +75,79 @@
 			},function(){
 				$(this).children("ul").slideUp(200);
 				$(this).removeClass("active");
+				
+			});
+		</script>
+		<!--banner效果-->
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var ul = $(".box ul");
+				var count = $(".box li").length;//图片的数量
+				var imageWidth = $(".box").width();// 图片宽度
+				var index = 0;//图片轮播索引
+				var  points = $(".points");
+				
+				for(var i=0;i<count;i++){
+					points.append("<span></span>");
+				}
+				
+				points.css("margin-left",-12*count+"px").children("span").eq(0).addClass("active");				
+				
+				var first = $(".box ul li:first-child").clone();// 克隆第一张图
+				var last  = $(".box ul li:last-child").clone();// 克隆最后一张图
+				ul.append(first);
+				last.insertBefore($(".box ul li:first-child"));
+				// 设置 ul宽度
+				ul.width((count+2)*imageWidth);
+				
+				var t = setInterval(function(){
+					index = (index+1)%count;
+					imageSwitch(index);
+				},1000);
+				
+				
+				$(".box").hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+						index = (index+1)%count;
+						imageSwitch(index);
+					},1000);
+				});
+				
+				// 点上添加悬停事件，进行图片的切换
+				points.children("span").hover(function(){
+					index = $(this).index();
+					imageSwitch(index);
+				});
+				// 图片切换处理函数
+				function imageSwitch(i){
+					// 停掉没有执行完成的动画
+					ul.stop(true,true);
+					// 下面点的状态切换
+					points.children("span").removeClass("active").eq(i).addClass("active");	
+					
+					if((i == 0)&&(parseInt(ul.css("left"))<(imageWidth*-2))){
+						// 针对第一张做特殊处理
+						ul.animate({
+							left:(count+1)*imageWidth*-1+"px"
+						},500,function(){
+							ul.css("left",-1*imageWidth+"px");
+						});
+					}else if((i==(count-1))&&(parseInt(ul.css("left"))>(imageWidth*-2))){
+						// 针对最后一张做特殊处理
+						ul.animate({
+							left:'0px'
+						},500,function(){
+							ul.css("left",-1*count*imageWidth+"px");
+						});
+						
+					}else{
+						ul.animate({
+							left:(i+1)*imageWidth*-1+"px"
+						},500);
+					}
+				}
 				
 			});
 		</script>

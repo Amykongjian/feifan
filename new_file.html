@@ -4,31 +4,31 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<style type="text/css">
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
 			.box{
-				width: 520px;
-				height: 280px;
-				border: solid 1px gray;
-				margin: 50px auto;
+				width: 1200px;
+				height: 350px;
 				position: relative;
 				overflow: hidden;
 			}
 			
 			.box ul{
-				margin: 0;
-				padding: 0;
 				position: absolute;
 				top: 0;
 				left: 0;
 				list-style: none;
 			}
 			.box ul li{
-				width: 520px;
-				height: 280px;
+				width: 1200px;
+				height: 350px;
 				float: left;
 			}
 			.box ul li img{
-				width: 520px;
-				height: 280px;
+				width: 1200px;
+				height: 350px;
 			}
 			
 			.points{
@@ -50,28 +50,7 @@
 				background-color: orangered;
 			}
 			
-			.box .prev,.box .next{
-				width: 30px;
-				height: 60px;
-				color: white;
-				font-size: 40px;
-				line-height: 50px;
-				position: absolute;
-				top: 110px;
-				background-color: rgba(0,0,0,0.4);
-				display: none;
-			}
-			.box:hover .prev,.box:hover .next{
-				display: block;
-			}
-			.box .prev{
-				left: 0px;
-				text-align: left;
-			}
-			.box .next{
-				right: 0px;
-				text-align: right;
-			}
+			
 		</style>
 		
 	</head>
@@ -79,22 +58,21 @@
 		
 		<div class="box">
 			<ul>
-				<li><img src="img/1.jpg"></li>
-				<li><img src="img/2.jpg"></li>
-				<li><img src="img/3.jpg"></li>
-				<li><img src="img/4.jpg"></li>
-				<li><img src="img/5.jpg"></li>
+				<li><img src="images/banner1.jpg"></li>
+				<li><img src="images/banner2.jpg"></li>
+				<li><img src="images/banner3.jpg"></li>
+				<li><img src="images/banner4.jpg"></li>
+				<li><img src="images/banner5.jpg"></li>
+				<li><img src="images/banner6.jpg"></li>
+				<li><img src="images/banner7.jpg"></li>
+				<li><img src="images/banner8.jpg"></li>
+				<li><img src="images/banner9.jpg"></li>
+				<li><img src="images/banner10.jpg"></li>
 			</ul>
 			
 			<div class="points"></div>
 			
-			<div class="prev">
-				«
-			</div>
-			
-			<div class="next">
-				»
-			</div>
+		
 		</div>
 		
 		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
@@ -123,7 +101,7 @@
 				var t = setInterval(function(){
 					index = (index+1)%count;
 					imageSwitch(index);
-				},3000);
+				},1000);
 				
 				
 				$(".box").hover(function(){
@@ -132,7 +110,7 @@
 					t = setInterval(function(){
 						index = (index+1)%count;
 						imageSwitch(index);
-					},3000);
+					},1000);
 				});
 				
 				// 点上添加悬停事件，进行图片的切换
@@ -141,21 +119,7 @@
 					imageSwitch(index);
 				});
 				
-				// 下一页
-				$(".box .next").click(function(){
-					
-					index = (index+1)%count;
-					imageSwitch(index);
-					
-				});
 				
-				// 上一页
-				$(".box .prev").click(function(){
-					
-					index = (index+count-1)%count;
-					imageSwitch(index);
-					
-				});
 				
 				// 图片切换处理函数
 				function imageSwitch(i){
