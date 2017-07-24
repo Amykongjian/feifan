@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 520px;
+				height: 280px;
+				border: solid 1px gray;
+				margin: 50px auto;
+				position: relative;
+				overflow: hidden;
+			}
+			
+			.box ul{
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				list-style: none;
+			}
+			.box ul li{
+				width: 520px;
+				height: 280px;
+				float: left;
+			}
+			.box ul li img{
+				width: 520px;
+				height: 280px;
+			}
+			
+			.points{
+				position: absolute;
+				bottom: 20px;
+				left: 50%;
+			}
+			.points span{
+				display: block;
+				width: 16px;
+				height: 16px;
+				float: left;
+				margin:4px;
+				border-radius: 50%;
+				background-color: orange;
+			}
+			
+			.points span.active{
+				background-color: orangered;
+			}
+			
+			.box .prev,.box .next{
+				width: 30px;
+				height: 60px;
+				color: white;
+				font-size: 40px;
+				line-height: 50px;
+				position: absolute;
+				top: 110px;
+				background-color: rgba(0,0,0,0.4);
+				display: none;
+			}
+			.box:hover .prev,.box:hover .next{
+				display: block;
+			}
+			.box .prev{
+				left: 0px;
+				text-align: left;
+			}
+			.box .next{
+				right: 0px;
+				text-align: right;
+			}
+		</style>
+		
+	</head>
+	<body>
+		
+		<div class="box">
+			<ul>
+				<li><img src="img/1.jpg"></li>
+				<li><img src="img/2.jpg"></li>
+				<li><img src="img/3.jpg"></li>
+				<li><img src="img/4.jpg"></li>
+				<li><img src="img/5.jpg"></li>
+			</ul>
+			
+			<div class="points"></div>
+			
+			<div class="prev">
+				«
+			</div>
+			
+			<div class="next">
+				»
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var ul = $(".box ul");
+				var count = $(".box li").length;//图片的数量
+				var imageWidth = $(".box").width();// 图片宽度
+				var index = 0;//图片轮播索引
+				var  points = $(".points");
+				
+				for(var i=0;i<count;i++){
+					points.append("<span></span>");
+				}
+				
+				points.css("margin-left",-12*count+"px").children("span").eq(0).addClass("active");				
+				
+				var first = $(".box ul li:first-child").clone();// 克隆第一张图
+				var last  = $(".box ul li:last-child").clone();// 克隆最后一张图
+				ul.append(first);
+				last.insertBefore($(".box ul li:first-child"));
+				// 设置 ul宽度
+				ul.width((count+2)*imageWidth);
+				
+				var t = setInterval(function(){
+					index = (index+1)%count;
+					imageSwitch(index);
+				},3000);
+				
+				
+				$(".box").hover(function(){
+					clearInterval(t);
+				},function(){
+					t = setInterval(function(){
+						index = (index+1)%count;
+						imageSwitch(index);
+					},3000);
+				});
+				
+				// 点上添加悬停事件，进行图片的切换
+				points.children("span").hover(function(){
+					index = $(this).index();
+					imageSwitch(index);
+				});
+				
+				// 下一页
+				$(".box .next").click(function(){
+					
+					index = (index+1)%count;
+					imageSwitch(index);
+					
+				});
+				
+				// 上一页
+				$(".box .prev").click(function(){
+					
+					index = (index+count-1)%count;
+					imageSwitch(index);
+					
+				});
+				
+				// 图片切换处理函数
+				function imageSwitch(i){
+					// 停掉没有执行完成的动画
+					ul.stop(true,true);
+					// 下面点的状态切换
+					points.children("span").removeClass("active").eq(i).addClass("active");	
+					
+					if((i == 0)&&(parseInt(ul.css("left"))<(imageWidth*-2))){
+						// 针对第一张做特殊处理
+						ul.animate({
+							left:(count+1)*imageWidth*-1+"px"
+						},500,function(){
+							ul.css("left",-1*imageWidth+"px");
+						});
+					}else if((i==(count-1))&&(parseInt(ul.css("left"))>(imageWidth*-2))){
+						// 针对最后一张做特殊处理
+						ul.animate({
+							left:'0px'
+						},500,function(){
+							ul.css("left",-1*count*imageWidth+"px");
+						});
+						
+					}else{
+						ul.animate({
+							left:(i+1)*imageWidth*-1+"px"
+						},500);
+					}
+				}
+				
+			});
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,125 @@
+/*通用*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 12px;
+	font-family: "arial, helvetica, sans-serif";
+	background-color: #fff;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.posi{
+	position: relative;
+}
+/*首页*/
+/*nav导航条*/
+.top{
+	height: 40px;
+	line-height: 40px;
+	background-color: #535353;
+}
+.top li span{
+	padding-left: 20px;
+}
+.top li span:after{
+	display: inline-block;
+	content: ">";
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+.top li.active span:after{
+	-webkit-transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+.top ul{
+	list-style: none;
+}
+.top ul li{
+	padding: 0px 10px;
+	float: left;
+	position: relative;
+}
+.top ul li:hover{
+	background-color: white;
+}
+.top ul li a{
+	color: #FFFFFF;
+}
+.top ul li:hover a{
+	color: #535353;
+}
+
+.top ul ul{
+	text-align: center;
+	background-color: white;
+	width: 98px;
+	line-height: 32px;
+	position: absolute;
+	border: solid 1px gainsboro;
+	border-top-color: #fff;
+	top: 40px;
+	left: 0px;
+}
+
+.top ul ul li{
+	float: none;
+}
+.top ul ul li:hover{
+	background-color: gainsboro;
+}
+.top ul ul li:hover a{
+	color: #dd2727;
+}
+
+.logo-text{
+	width: 360px;
+	height: 117px;
+	line-height: 117px;
+	position: relative;
+    font-size: 18px;
+    float: left;
+    padding-left:10px ;
+}
+.logo-textr{
+	height: 117px;
+	float: left;
+	line-height: 117px;
+	font-size: 16px;
+}
+.logo-textr img{
+	position: relative;
+	top: 10px;
+}
+.logo-textr li{
+	list-style: none;
+	float: left;
+	margin-left: 28px;
+}
