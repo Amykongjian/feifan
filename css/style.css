@@ -36,6 +36,9 @@ a {
 .posi{
 	position: relative;
 }
+li{
+	list-style: none;
+}
 /*首页*/
 .side-ad{
 	position: absolute;
@@ -291,4 +294,86 @@ margin-top:-15px ;
 	width: 200px;
 	height: 130px;
 	margin: 15px 0px;
+	position: relative;
+}
+.popular-courses-pos{
+				width: 200px;
+				height: 30px;
+				background: rgba(0,0,0,0.7);
+				position: absolute;
+				bottom: 0px;
+				color: #FFFFFF;
+				line-height: 30px;
+				text-align: left;
+				text-indent: 1em;
+			}
+/*class*/
+.classes{
+	height: 47px;
+	border-bottom: solid 1px #b8b8b8;
+	margin: 25px 0px;
+	line-height: 47px;
+}
+.class-left{
+	width: 260px;
+	float: left;
+	font-size: 24px;
+	font-weight: lighter;
+	
+}
+.class-right{
+	float: left;
+	font-weight:bold;
+}
+.class-right ul{
+	list-style: none;
+}
+.class-right ul li{
+	float: left;
+	width: 100px;
+	text-align: center;
+	
+}
+.class-right ul li:hover{
+	border-bottom: solid 2px #DD2726;
+	
+}
+.class-right ul li:hover a{
+	color: #DD2726;
+}
+.classlist{
+	height: 250px;
+}
+.classlist li{
+	width: 270px;
+	height: 250px;
+	float: left;
+
+}
+.classlist-mar{
+	margin-right:40px ;
+}
+.classlist li img{
+	width: inherit;
+	height: 180px;
+}
+.classlist li p {
+	color: #b8b8b8;
+	line-height: 2.5;
+}
+.classlist li p a{
+	font-size: 14px;
+
+}
+.classlist li p a:hover{
+	color: #DD2726;
+}
+.classlist button{
+	float: right;
+	color: #b8b8b8;
+	border: none;
+	background: none;
+	font-size: 12px;
+	height: 32px;
+	line-height: 32px;
 }

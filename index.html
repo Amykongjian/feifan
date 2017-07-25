@@ -106,13 +106,59 @@
 					热门课程
 				</span>
 				<ul>
-					<li><a href=""><img src="images/pc1.jpg"/></a></li>
-					<li><a href=""><img src="images/pc2.jpg"/></a></li>
-					<li><a href=""><img src="images/pc3.jpg"/></a></li>
-					
+					<li><a href=""><img src="images/pc1.jpg"/></a>
+					<div class="popular-courses-pos">UI交互设计</div>
+					</li>
+					<li><a href=""><img src="images/pc2.jpg"/></a>
+					<div class="popular-courses-pos">淘宝美工设计</div>
+					</li>
+					<li><a href=""><img src="images/pc3.jpg"/></a>
+					<div class="popular-courses-pos">网络教育学历</div>
+					</li>
 				</ul>
 			</div>
 		</div>
+		<!--开班介绍-->
+		<div class="classes">
+			<div class="class-left">
+				最新开班
+			</div>
+			<div class="class-right">
+				<ul>
+					<li><a href="">平面UI</a></li>
+					<li><a href="">网页设计</a></li>
+					<li><a href="">室内景观</a></li>
+					<li><a href="">淘宝美工</a></li>
+					<li><a href="">电商网销</a></li>
+					<li><a href="">机械模具</a></li>
+					<li><a href="">服装设计</a></li>
+					<li><a href="">影视美术</a></li>
+					<li><a href="">网络工程</a></li>
+				</ul>
+			</div>
+		</div>
+		<ul class="classlist">
+			<li class="classlist-mar">
+				<img src="images/classpic1.jpg"/>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li >
+			<li class="classlist-mar">
+				<img src="images/classpic2.jpg"/>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li>
+			<li class="classlist-mar">
+				<img src="images/classpic3.jpg"/>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li>
+			<li class="classlist-linone">
+				<img src="images/classpic4.jpg"/>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li>
+		</ul>
 </div>
 		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 		<script type="text/javascript" src="js/jquery.easing.min.js" ></script>
@@ -223,6 +269,20 @@ var qrcode=document.getElementsByClassName("qrcode")[0];
 				}
 				
 			});
+			//
+			$(document).ready(function(){
+					$(".popular-courses li").hover(function(){
+					$(".popular-courses-pos").animate({
+						width:"200px",
+						height:"70px",
+					},200,function(){});
+				},function(){
+					$(".popular-courses-pos").animate({
+						width:"200px",
+						height:"30px",
+					},200,function(){});
+				});
+				});
 		</script>
 	</body>
 </html>

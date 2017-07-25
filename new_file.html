@@ -50,7 +50,17 @@
 			.points span.active{
 				background-color: orangered;
 			}
-			
+			.popular-courses-pos{
+				width: 200px;
+				height: 30px;
+				background: rgba(0,0,0,0.7);
+				position: absolute;
+				bottom: 0px;
+				color: #FFFFFF;
+				line-height: 30px;
+				text-align: left;
+				text-indent: 1em;
+			}
 			
 		</style>
 		
@@ -158,7 +168,7 @@
 			
 			
 		</script>-->
-		<div class="wechat right" onmouseenter="enterDemo();" onmouseleave="leaveDemo()">
+		<!--<div class="wechat right" onmouseenter="enterDemo();" onmouseleave="leaveDemo()">
 				<img src="images/wx.png"/>
 				<div class="qrcode"></div>
 			</div>
@@ -172,6 +182,40 @@
 				qrcode.style.display = "none";
 			}
 			
+			</script>-->
+			<!---->
+			<div class="popular-courses">
+				<span >
+					热门课程
+				</span>
+				<ul>
+					<li><a href=""><img src="images/pc1.jpg"/></a>
+					<div class="popular-courses-pos">UI交互设计</div>
+					</li>
+					<li><a href=""><img src="images/pc2.jpg"/></a>
+					<div class="popular-courses-pos">淘宝美工设计</div>
+					</li>
+					<li><a href=""><img src="images/pc3.jpg"/></a>
+					<div class="popular-courses-pos">网络教育学历</div>
+					</li>
+				</ul>
+			</div>
+			<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$(".popular-courses li").hover(function(){
+					$(".popular-courses-pos").animate({
+						width:"200px",
+						height:"70px",
+					},200,function(){}).innerHTML="zhu";
+				},function(){
+					$(".popular-courses-pos").animate({
+						width:"200px",
+						height:"30px",
+					},200,function(){});
+				});
+$(".popular-courses-pos").innerText="zhu";
+				});
 			</script>
 	</body>
 </html>
