@@ -37,6 +37,11 @@ a {
 	position: relative;
 }
 /*首页*/
+.side-ad{
+	position: absolute;
+	left: 0;
+	top: 0px;
+}
 /*nav导航条*/
 .top{
 	height: 40px;
@@ -103,6 +108,16 @@ a {
 	position: relative;
 	top: 5px;
 	right: 10px;
+}
+.qrcode{
+	width: 110px;
+	height: 110px;
+	background: url(../images/wx2.jpg);
+	position: absolute;
+	top: 40px;
+    right: -10px;
+	display: none;
+	
 }
 /*logo部分*/
 .logo-text{
@@ -172,3 +187,108 @@ a {
 			.points span.active{
 				background-color: orangered;
 			}
+			/*new信息资讯*/
+			.new{
+				height: 480px;
+				margin-top:27px ;
+				border: solid 1px red;
+				
+			}
+.course{
+	width: 220px;
+	height: 40px;
+	background: #dd2726;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 40px;
+	float: left;
+	font-size: 16px;
+	position: relative;
+}
+.course ul{
+	width: 218px;
+	height: 410px;
+	border: solid 1px #b8b8b8;
+	position: absolute;
+	top: 40px;
+	list-style: none;
+}
+.course ul li{
+	height: 40px;
+	border-bottom:solid 1px #b8b8b8;
+	color: #333333;
+	font-size: 16px;
+	text-align: left;
+	text-indent:1.5em;
+}
+.course ul li:hover{
+	color: #DD2726;
+	
+}
+.course ul li a{
+	color: #a9b0ca;
+	font-family: "arial, helvetica, sans-serif";
+	font-size: 12px;
+}
+.course ul li a:hover{
+	color: #DD2726;
+}
+.newsbar{
+	width: 732px;
+	height: 450px;
+	border: solid 1px red;
+	margin: 0px 20px;
+	float: left;
+	
+}
+.newsbar-nav{
+	width: 732px;
+	height:40px ;
+	border-bottom: solid 1px #B8B8B8;
+}
+.newsbar-nav ul{
+	list-style: none;
+}
+.newsbar-nav ul li{
+	float: left;
+	width: 120px;
+	height: 40px;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 40px;
+	
+}
+.newsbar-nav ul li:hover{
+	border-bottom: solid 2px #DD2726;
+	
+}
+.newsbar-nav ul li:hover a{
+	color: #DD2726;
+
+	
+}
+.popular-courses{
+	height: 480px;
+	width: 200px;
+	float: left;
+	text-align: center;
+}
+.popular-courses span{
+	widows: 200px;
+	height: 40px;
+	line-height: 40px;
+font-size: 16px;
+font-weight: 700px;
+	
+}
+.popular-courses ul{
+	list-style: none;
+margin-top:-15px ;
+	
+}
+.popular-courses ul li{
+	width: 200px;
+	height: 130px;
+	margin: 15px 0px;
+}
