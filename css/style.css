@@ -44,6 +44,7 @@ li{
 	position: absolute;
 	left: 0;
 	top: 0px;
+	z-index: 999;
 }
 /*nav导航条*/
 .top{
@@ -95,6 +96,8 @@ li{
 	border-top-color: #fff;
 	top: 40px;
 	left: 0px;
+	display: none;
+	z-index: 999;
 }
 
 .top ul ul li{
@@ -107,7 +110,7 @@ li{
 	color: #dd2727;
 }
 .wechat{
-	height: 40px;
+	height: 35px;
 	position: relative;
 	top: 5px;
 	right: 10px;
@@ -145,7 +148,11 @@ li{
 .logo-textr li{
 	list-style: none;
 	float: left;
-	margin-left: 28px;
+	margin-left: 30px;
+}
+.logo-textr li span{
+	font-size: 18px;
+	font-weight: bold;
 }
 /*banner*/
 .box{
@@ -217,13 +224,15 @@ li{
 }
 .course ul li{
 	height: 40px;
-	border-bottom:solid 1px #b8b8b8;
+	border-top:solid 1px #b8b8b8;
 	color: #333333;
 	font-size: 16px;
 	text-align: left;
 	text-indent:1.5em;
 }
-.course ul li:hover{
+.course ul li.active{
+	background: #d8d8d8;
+	z-index: 9999;
 	color: #DD2726;
 	
 }
@@ -232,13 +241,21 @@ li{
 	font-family: "arial, helvetica, sans-serif";
 	font-size: 12px;
 }
-.course ul li a:hover{
+.course ul li a.active{
 	color: #DD2726;
 }
+.sub-category{
+				width: 600px;
+				height: 410px;
+				display: none;
+				box-sizing: border-box;
+				border-top: solid 1px grey;
+				border-right: solid 1px grey;
+				border-bottom: solid 1px grey;
+			}
 .newsbar{
 	width: 732px;
 	height: 450px;
-	border: solid 1px red;
 	margin: 0px 20px;
 	float: left;
 	
@@ -251,7 +268,7 @@ li{
 .newsbar-nav ul{
 	list-style: none;
 }
-.newsbar-nav ul li{
+.newsbar-nav li{
 	float: left;
 	width: 120px;
 	height: 40px;
@@ -260,14 +277,67 @@ li{
 	line-height: 40px;
 	
 }
-.newsbar-nav ul li:hover{
+.newsbar-nav ul li.active{
 	border-bottom: solid 2px #DD2726;
 	
 }
-.newsbar-nav ul li:hover a{
+.newsbar-nav ul li.active a{
 	color: #DD2726;
-
+}
+.newsbar-list{
+	width: 732px;
+	height: 410px;
+	position: relative;
+	overflow: hidden;
+}
+.newsbar-listleft{
+	width: 366px;
+	height: 410px;
 	
+}
+
+.newsbar-listleft  li{
+	width: 340px;
+	height: 62px;
+	padding: 20px 25px 20px 0px;
+	color: #b8b8b8;
+	
+}
+.itempic{
+	width: 50px;
+	height: 62px;
+	text-align: center;
+	
+
+}
+.itempic img{
+	width: 50px;
+	height: 50px;
+	border-radius:50% ;
+	overflow: hidden;
+}
+.itemtext{
+	width: 260px;
+	height: 62px;
+	
+}
+.newsbar-list .item{
+	display: none;
+}
+.newsbar-list .item-1{
+	display: block;
+}
+.itemtext-p{
+	/*height: 60px;*/
+	line-height: 2;
+	color: #333333;
+	font-size: 14px;
+	
+}
+.newsbar-listright{
+	position: absolute;
+	top: 0px;
+	left: 360px;
 }
 .popular-courses{
 	height: 480px;
@@ -351,9 +421,18 @@ margin-top:-15px ;
 .classlist-mar{
 	margin-right:40px ;
 }
-.classlist li img{
-	width: inherit;
+.classimg-box{
+	width: 270px;
 	height: 180px;
+	overflow: hidden;
+	position: relative;
+}
+.classimg-box img{
+	width: 270px;
+	height: 180px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
 }
 .classlist li p {
 	color: #b8b8b8;
@@ -384,10 +463,10 @@ margin-top:-15px ;
     margin: 30px 0px;
 	text-align: left;
 }
-.classtable-text{
+.classtable-text {
 	height: 35px;
 	font-family: "微软雅黑";
-	font-weight: 100;
+	font-weight:lighter;
 	border: solid 1px #b8b8b8;
 
 }

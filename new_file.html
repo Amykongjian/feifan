@@ -184,7 +184,7 @@
 			
 			</script>-->
 			<!---->
-			<div class="popular-courses">
+			<!--<div class="popular-courses">
 				<span >
 					热门课程
 				</span>
@@ -199,21 +199,64 @@
 					<div class="popular-courses-pos">网络教育学历</div>
 					</li>
 				</ul>
-			</div>
+			</div>-->
 			<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
-			<script type="text/javascript">
+			<!--<script type="text/javascript">
 				$(document).ready(function(){
 					$(".popular-courses li").hover(function(){
 					$(".popular-courses-pos").animate({
 						width:"200px",
 						height:"70px",
-					},200,function(){});
+					},200,function(){}).innerHTML="zhu";
 				},function(){
 					$(".popular-courses-pos").animate({
 						width:"200px",
 						height:"30px",
 					},200,function(){});
 				});
+				});
+			</script>-->
+				<ul class="classlist">
+			<li class="classlist-mar">
+				<div class="classimg-box">
+					<img src="images/classpic1.jpg"/>
+				</div>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li >
+			<li class="classlist-mar">
+				<div class="classimg-box">
+					<img src="images/classpic1.jpg"/>
+				</div>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li>
+			<li class="classlist-mar">
+				<div class="classimg-box">
+					<img src="images/classpic1.jpg"/>
+				</div>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li>
+			<li class="classlist-linone">
+				<div class="classimg-box">
+					<img src="images/classpic1.jpg"/>
+				</div>
+				<p><a href="">平面设计全科班(白天班)</a></p>
+				<p>优惠价：3800元<button>查看></button></p>
+			</li>
+		</ul>
+			<script type="text/javascript">
+				$(".classimg-box").hover(function(){
+					$(".classlist li img").animate({
+						width:"540px",
+						height:"360px",
+					},1000,function(){});
+				},function(){
+					$(".classlist li img").animate({
+						width:"270px",
+						height:"180px",
+					},1000,function(){});
 				});
 			</script>
 	</body>
