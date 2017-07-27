@@ -694,3 +694,85 @@ background: rgba(0,0,0,0.5);
 	line-height: 50px;
 	text-align: center;
 }
+/*校区分布*/
+.campus-title{
+	clear: both;
+	width: 1200px;
+	height: 120px;
+	line-height: 120px;
+	font-size: 20px;
+}
+.campus-list{
+	width: 1200px;
+	margin: auto;
+	height: 205px;
+	color: #333333;
+
+	
+}
+.campus-list li{
+	width: 275px;
+	height: 50px;
+	float: left;
+	padding: 0px 10px 50px 10px;
+	
+}
+.campus-listl{
+	height: 50px;
+	width: 49px;
+	font-size: 16px;
+	border-right: solid 1px #B8B8B8;
+	/*border: solid 1px red;*/
+}
+.campus-listr{
+	width: 180px;
+	height: 50px;
+	padding-left:10px ;
+	line-height: 2;
+}
+.campus-listr-text10{
+	font-size: 10px;
+	color: #999999;
+}
+/*合作企业*/
+.enterprise-title{
+	width: 1200px;
+	height: 90px;
+	line-height: 90px;
+	font-size: 20px;
+}
+/*尾部*/
+.bot{
+	height: 580px;
+	background: #f3f3f3;
+}
+.bottop{
+	width: 1200px;
+	height: 130px;
+	border-bottom: solid 1px #D8D8D8;
+}
+.bottop-list{
+	width: 1200px;
+	margin: auto;
+	height: 130px;
+	color: #333333;
+
+	
+}
+.bottop-list li{
+	width: 195px;
+	height: 85px;
+	float: left;
+	color: #999999;
+	padding-top:45px ;
+}
+.bottop-listr{
+	width: 100px;
+	height: 50px;
+	line-height: 1.8;
+	
+}
+.bottop-listrtext14{
+	font-size: 14px;
+	color: #333333;
+}
