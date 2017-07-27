@@ -671,3 +671,26 @@ background: rgba(0,0,0,0.5);
 	height: 100px;
 	padding:10px 0px 0px 0px;
 }
+/*非凡荣誉*/
+.honor-title{
+	width: 1200px;
+	height: 100px;
+	font-size: 20px;
+	line-height: 100px;
+}
+.honor-list{
+	width: 1180px;
+	/*padding: 0px 10px;*/
+}
+.honor-list li{
+	width: 270px;
+	height: 225px;
+	float: left;
+	padding-left:25px ;
+}
+.honor-listtext{
+	width: 270px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
