@@ -466,7 +466,6 @@ margin-top:-15px ;
 .classtable-text {
 	height: 35px;
 	font-family: "微软雅黑";
-	font-weight:lighter;
 	border: solid 1px #b8b8b8;
 
 }
@@ -476,5 +475,103 @@ margin-top:-15px ;
 .text-al {
 	color: #57b6ec;
 	text-align: center;
+	
+}
+/*文字滚动*/
+.textscrolls{
+	clear: both;
+	border-bottom: solid 1px #b8b8b8;
+	
+}
+.textscrollsl{
+     background: #FFFFFF;
+	width: 108px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	position: relative;
+	float: left;
+	border-bottom:solid 2px #DD2726 ;
+}
+.textscrollsl img{
+	position: absolute;
+	top: 10px;
+	left: 0px;
+}
+.textscrollsr{
+	width: 1090px;
+	height: 40px;
+	line-height: 40px;
+	position: relative;
+	overflow: hidden;
+}
+.textscrollsr ul{
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 14px;
+	
+}
+.textscrollsr ul li{
+	float: left;
+	width: 210px;
+	padding-right:50px ;
+	overflow: hidden;
+}
+.teacher-title{
+	clear: both;
+	width: 1200px;
+	height: 103px;
+	border: solid 1px red;
+}
+.teacher-title-l{
+	font-size: 20px;
+	padding-top:50px ;
+}
+.teacher-title-r{
+	padding-top:50px ;
+	border: solid 1px red;
+	font-size: 14px;
+}
+.teacher-title-r a:hover{
+	color: #DD2726;
+}
+.teacher-title-r button{
+	border: none;
+	background: none;
+	color: #DD2726;
+	font-weight: bold;
+	padding-right:10px ;
+}
+.teacher-list{
+	width: 1186px;
+	margin: 0px auto;
+}
+.teacher-list li{
+	float: left;
+	width:269px;
+	height: 250px;
+	color: #B8B8B8;
+position: relative;
+}
+.teacher-list li p{
+	padding-top: 10px;
+	height: 30px;
+	/*height: 2;*/
+	font-size: 14px;
+	color: #333333;
+}
+.add-padding{
+	padding-right:33px ;
+}
+.teacher-list img:hover{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 269px;
+	height: 181px;
+	background: rgba(0,158,69,0.5);
+	
 	
 }
