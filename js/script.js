@@ -1,7 +1,30 @@
 			//侧边栏效果
-			
+			$(".top ul li").hover(function(){
+				$(this).children("ul").slideDown(200);
+				$(this).addClass("active");
+			},function(){
+				$(this).children("ul").slideUp(200);
+				$(this).removeClass("active");
 				
-		<!--banner效果-->
+			});
+//			
+//			
+			$(document).ready(function(){
+				
+				var h = $(window).height();
+				var sh = $(".side-ad").height();
+				// 上边滑动的距离
+				var offsetTop = $(window).scrollTop();
+				var top = (h-sh)/2;
+				$(".side-ad").css("top",top+offsetTop+"px");
+				
+				$(document).scroll(function(){
+					offsetTop = $(window).scrollTop();
+					$(".side-ad").animate({top:top+offsetTop+"px"},100);
+				});
+			});
+				
+//		<!--banner效果-->
 			$(document).ready(function(){
 				var ul = $(".box ul");
 				var count = $(".box li").length;//图片的数量
@@ -21,7 +44,6 @@
 				last.insertBefore($(".box ul li:first-child"));
 				// 设置 ul宽度
 				ul.width((count+2)*imageWidth);
-				
 				var t = setInterval(function(){
 					index = (index+1)%count;
 					imageSwitch(index);
@@ -103,7 +125,7 @@ $(this).children("img").stop(true,true).animate({
 				//切换
 				var tab = $(".newsbar-nav li");
 			var items = $(".newsbar-list .item");
-			console.log(tab);
+//			console.log(tab);
 			tab.hover(function(){
 				var index = $(this).index();
 				tab.removeClass("active");

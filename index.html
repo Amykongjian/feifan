@@ -10,9 +10,41 @@
 		<div class="side-ad">
 			<img src="images/side.jpg">
 		</div>
+		
 		<!--导航条-->
 		<!--用js引用导航条-->
 		<div class="nav"></div>
+		<!--<div class="top">
+			<div class="w">
+			<ul class="left">
+				<li><a href="">首页 <span class="row"></span></a></li>
+				<li><a href="">学院介绍<span class="row"></span></a>
+					<ul class="sub-nav">
+						<li><a href="#">学院介绍</a></li>
+						<li><a href="#">学院介绍</a></li>
+						<li><a href="#">学院介绍</a></li>
+						<li><a href="#">学院介绍</a></li>
+						<li><a href="#">学院介绍</a></li>
+						<li><a href="#">学院介绍</a></li>
+						<li><a href="#">学院介绍</a></li>
+					</ul>
+				</li>
+				<li><a href="">课程导航<span class="row"></span></a></li>
+				<li><a href="">师资力量<span class="row"></span></a></li>
+				<li><a href="">学员作品<span class="row"></span></a></li>
+				<li><a href="">学历考证<span class="row"></span></a></li>
+				<li><a href="">就业信息<span class="row"></span></a></li>
+				<li><a href="">学习资讯<span class="row"></span></a></li>
+				<li><a href="">入学须知<span class="row"></span></a></li>
+			</ul>
+			
+			<div class="wechat right" onmouseenter="enterDemo();" onmouseleave="leaveDemo()">
+				<img src="images/wx.png"/>
+				<div class="qrcode"></div>
+			</div>
+			</div>
+		</div>-->
+		
 		<!--logo一栏-->
 		<div class="w">
 		<div class="w">
@@ -925,7 +957,32 @@
 		<script type="text/javascript" src="js/jquery.easing.min.js" ></script>
 		<!--导航条效果-->
 		<script type="text/javascript" src="js/script.js" ></script>
-			
+		<script type="text/javascript">
+//			$(".top ul li").hover(function(){
+//				$(this).children("ul").slideDown(200);
+//				$(this).addClass("active");
+//			},function(){
+//				$(this).children("ul").slideUp(200);
+//				$(this).removeClass("active");
+//				
+//			});
+//			
+//			
+//			$(document).ready(function(){
+//				
+//				var h = $(window).height();
+//				var sh = $(".side-ad").height();
+//				// 上边滑动的距离
+//				var offsetTop = $(window).scrollTop();
+//				var top = (h-sh)/2;
+//				$(".side-ad").css("top",top+offsetTop+"px");
+//				
+//				$(document).scroll(function(){
+//					offsetTop = $(window).scrollTop();
+//					$(".side-ad").animate({top:top+offsetTop+"px"},100,"easeOutBack");
+//				});
+//			});
+		</script>	
 
 	</body>
 </html>

@@ -43,7 +43,7 @@ li{
 .side-ad{
 	position: absolute;
 	left: 0;
-	top: 0px;
+	top: 0;
 	z-index: 999;
 }
 /*nav导航条*/
