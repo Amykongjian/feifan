@@ -1,14 +1,5 @@
-			//侧边栏效果
-			$(".top ul li").hover(function(){
-				$(this).children("ul").slideDown(200);
-				$(this).addClass("active");
-			},function(){
-				$(this).children("ul").slideUp(200);
-				$(this).removeClass("active");
-				
-			});
-//			
-//			
+			
+//			//侧边栏效果
 			$(document).ready(function(){
 				
 				var h = $(window).height();
@@ -20,9 +11,10 @@
 				
 				$(document).scroll(function(){
 					offsetTop = $(window).scrollTop();
-					$(".side-ad").animate({top:top+offsetTop+"px"},100);
+					$(".side-ad").animate({top:top+offsetTop+"px"},50);
 				});
 			});
+			
 				
 //		<!--banner效果-->
 			$(document).ready(function(){
@@ -186,5 +178,5 @@ $(this).children("img").stop(true,true).animate({
 			},50000);
 			});
 //用js引用首部跟尾部
-           $(".nav").load("./nav.html");
+           $("#nav").load("./nav.html");
 $(".footer").load("./footer.html");
