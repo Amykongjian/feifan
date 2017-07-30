@@ -26,10 +26,11 @@
 				<li><a href="">入学须知<span class="row"></span></a></li>
 			</ul>
 			
-			<div class="wechat right" onmouseenter="enterDemo();" onmouseleave="leaveDemo()">
+			<div class="wechat right" >
 				<img src="images/wx.png"/>
-				<div class="qrcode"></div>
+				<div class="wxpic"></div>
 			</div>
+			
 			</div>
 		</div>
 
@@ -37,20 +38,6 @@
 		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-				
-				var h = $(window).height();
-				var sh = $(".side-ad").height();
-				// 上边滑动的距离
-				var offsetTop = $(window).scrollTop();
-				var top = (h-sh)/2;
-				$(".side-ad").css("top",top+offsetTop+"px");
-				
-				$(document).scroll(function(){
-					offsetTop = $(window).scrollTop();
-					$(".side-ad").stop(true,true).animate({top:top+offsetTop+"px"},1000,"easeOutBack");
-				});
-			
-			
 			//导航栏效果
 			$(".top ul li").hover(function(){
 				$(this).children("ul").slideDown(200);
@@ -60,13 +47,14 @@
 				$(this).removeClass("active");
 				
 			});
-var qrcode=document.getElementsByClassName("qrcode")[0];
-				function enterDemo(){
-				qrcode.style.display = "block";
+      var wechat=document.getElementsByClassName("wechat")[0];
+      var wxpic=document.getElementsByClassName("wxpic")[0];
+			wechat.onmouseenter=function(){
+				wxpic.style.display = "block";
 			}
-				function leaveDemo(){
-				qrcode.style.display = "none";
-			}
+			wechat.onmouseleave=function(){
+				wxpic.style.display = "none";
+			}	
 			});
 				
 </script>
